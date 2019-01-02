@@ -1,0 +1,94 @@
+﻿@model FinancialDashboard.Models.YnabAccount
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>YnabAccount</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type" class="control-label"></label>
+                <input asp-for="Type" class="form-control" />
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="On_budget" /> @Html.DisplayNameFor(model => model.On_budget)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Closed" /> @Html.DisplayNameFor(model => model.Closed)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Note" class="control-label"></label>
+                <input asp-for="Note" class="form-control" />
+                <span asp-validation-for="Note" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Balance" class="control-label"></label>
+                <input asp-for="Balance" class="form-control" />
+                <span asp-validation-for="Balance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cleared_balance" class="control-label"></label>
+                <input asp-for="Cleared_balance" class="form-control" />
+                <span asp-validation-for="Cleared_balance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Uncleared_balance" class="control-label"></label>
+                <input asp-for="Uncleared_balance" class="form-control" />
+                <span asp-validation-for="Uncleared_balance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Transfer_payee_id" class="control-label"></label>
+                <input asp-for="Transfer_payee_id" class="form-control" />
+                <span asp-validation-for="Transfer_payee_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Deleted" /> @Html.DisplayNameFor(model => model.Deleted)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="APR" class="control-label"></label>
+                <input asp-for="APR" class="form-control" />
+                <span asp-validation-for="APR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MostRecentStatementID" class="control-label"></label>
+                <input asp-for="MostRecentStatementID" class="form-control" />
+                <span asp-validation-for="MostRecentStatementID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

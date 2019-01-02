@@ -1,0 +1,111 @@
+﻿@model FinancialDashboard.Models.GoalStatus
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>GoalStatus</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NextMonthSpending)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NextMonthSpending)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DebtFreeDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DebtFreeDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentMonthSpending)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrentMonthSpending)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentMonthIncome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrentMonthIncome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CashOnHand)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CashOnHand)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NetWorth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NetWorth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalDebt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalDebt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCCPayments)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalCCPayments)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RetirementAccounts)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RetirementAccounts)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OverallMonthlyExpenses)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OverallMonthlyExpenses)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OverallMonthlyIncome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OverallMonthlyIncome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ThreeMonthsExpenses)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ThreeMonthsExpenses)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ThreeMonthsIncome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ThreeMonthsIncome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectedMonthlyIncome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectedMonthlyIncome)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

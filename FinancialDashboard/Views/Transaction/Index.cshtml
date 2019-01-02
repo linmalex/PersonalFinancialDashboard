@@ -1,0 +1,125 @@
+﻿@model IEnumerable<FinancialDashboard.Models.Transaction>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Memo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cleared)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Approved)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Flag_color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Payee_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Payee_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transfer_account_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transfer_transaction_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Import_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Deleted)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Memo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cleared)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Approved)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Flag_color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Account_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Account_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Payee_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Payee_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transfer_account_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transfer_transaction_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Import_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deleted)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

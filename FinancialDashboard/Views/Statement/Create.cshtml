@@ -1,0 +1,63 @@
+﻿@model FinancialDashboard.Models.Statement
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Statement</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AccountID" class="control-label"></label>
+                <select asp-for="AccountID" class="form-control" asp-items="Model.LiabilityAccounts"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastStatementDate" class="control-label"></label>
+                <input asp-for="LastStatementDate" class="form-control" />
+                <span asp-validation-for="LastStatementDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatementMinPayment" class="control-label"></label>
+                <input asp-for="StatementMinPayment" class="form-control" />
+                <span asp-validation-for="StatementMinPayment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatementBalance" class="control-label"></label>
+                <input asp-for="StatementBalance" class="form-control" />
+                <span asp-validation-for="StatementBalance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaymentDueDate" class="control-label"></label>
+                <input asp-for="PaymentDueDate" class="form-control" />
+                <span asp-validation-for="PaymentDueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastPaymentDate" class="control-label"></label>
+                <input asp-for="LastPaymentDate" class="form-control" />
+                <span asp-validation-for="LastPaymentDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AutoPayScheduled" class="control-label"></label>
+                <input asp-for="AutoPayScheduled" class="form-control" />
+                <span asp-validation-for="AutoPayScheduled" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

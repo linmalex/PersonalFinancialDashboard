@@ -1,0 +1,103 @@
+﻿@model FinancialDashboard.Models.GoalStatus
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>GoalStatus</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NextMonthSpending" class="control-label"></label>
+                <input asp-for="NextMonthSpending" class="form-control" />
+                <span asp-validation-for="NextMonthSpending" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DebtFreeDate" class="control-label"></label>
+                <input asp-for="DebtFreeDate" class="form-control" />
+                <span asp-validation-for="DebtFreeDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentMonthSpending" class="control-label"></label>
+                <input asp-for="CurrentMonthSpending" class="form-control" />
+                <span asp-validation-for="CurrentMonthSpending" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentMonthIncome" class="control-label"></label>
+                <input asp-for="CurrentMonthIncome" class="form-control" />
+                <span asp-validation-for="CurrentMonthIncome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CashOnHand" class="control-label"></label>
+                <input asp-for="CashOnHand" class="form-control" />
+                <span asp-validation-for="CashOnHand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NetWorth" class="control-label"></label>
+                <input asp-for="NetWorth" class="form-control" />
+                <span asp-validation-for="NetWorth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalDebt" class="control-label"></label>
+                <input asp-for="TotalDebt" class="form-control" />
+                <span asp-validation-for="TotalDebt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalCCPayments" class="control-label"></label>
+                <input asp-for="TotalCCPayments" class="form-control" />
+                <span asp-validation-for="TotalCCPayments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RetirementAccounts" class="control-label"></label>
+                <input asp-for="RetirementAccounts" class="form-control" />
+                <span asp-validation-for="RetirementAccounts" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OverallMonthlyExpenses" class="control-label"></label>
+                <input asp-for="OverallMonthlyExpenses" class="form-control" />
+                <span asp-validation-for="OverallMonthlyExpenses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OverallMonthlyIncome" class="control-label"></label>
+                <input asp-for="OverallMonthlyIncome" class="form-control" />
+                <span asp-validation-for="OverallMonthlyIncome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThreeMonthsExpenses" class="control-label"></label>
+                <input asp-for="ThreeMonthsExpenses" class="form-control" />
+                <span asp-validation-for="ThreeMonthsExpenses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThreeMonthsIncome" class="control-label"></label>
+                <input asp-for="ThreeMonthsIncome" class="form-control" />
+                <span asp-validation-for="ThreeMonthsIncome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjectedMonthlyIncome" class="control-label"></label>
+                <input asp-for="ProjectedMonthlyIncome" class="form-control" />
+                <span asp-validation-for="ProjectedMonthlyIncome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

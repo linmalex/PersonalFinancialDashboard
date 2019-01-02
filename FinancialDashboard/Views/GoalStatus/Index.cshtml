@@ -1,0 +1,80 @@
+﻿@model IEnumerable<FinancialDashboard.Models.GoalStatus>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NextMonthSpending)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DebtFreeDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CashOnHand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NetWorth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalDebt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalCCPayments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RetirementAccounts)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NextMonthSpending)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DebtFreeDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CashOnHand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NetWorth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalDebt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalCCPayments)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RetirementAccounts)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,76 @@
+﻿@model FinancialDashboard.Models.Statement
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Statement</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="LastStatementDate" class="control-label"></label>
+                <input asp-for="LastStatementDate" class="form-control" />
+                <span asp-validation-for="LastStatementDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatementMinPayment" class="control-label"></label>
+                <input asp-for="StatementMinPayment" class="form-control" />
+                <span asp-validation-for="StatementMinPayment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatementBalance" class="control-label"></label>
+                <input asp-for="StatementBalance" class="form-control" />
+                <span asp-validation-for="StatementBalance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaymentDueDate" class="control-label"></label>
+                <input asp-for="PaymentDueDate" class="form-control" />
+                <span asp-validation-for="PaymentDueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastPaymentDate" class="control-label"></label>
+                <input asp-for="LastPaymentDate" class="form-control" />
+                <span asp-validation-for="LastPaymentDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AutoPayScheduled" class="control-label"></label>
+                <input asp-for="AutoPayScheduled" class="form-control" />
+                <span asp-validation-for="AutoPayScheduled" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountID" class="control-label"></label>
+                <input asp-for="AccountID" class="form-control" />
+                <span asp-validation-for="AccountID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountName" class="control-label"></label>
+                <input asp-for="AccountName" class="form-control" />
+                <span asp-validation-for="AccountName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="StatementPaid" /> @Html.DisplayNameFor(model => model.StatementPaid)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
