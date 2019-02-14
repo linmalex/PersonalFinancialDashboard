@@ -1,4 +1,8 @@
-# Personal Financial Dashboard
+# ARCHIVED Personal Financial Dashboard
+---------------------------------------
+## Updated 2/14/2019
+As of this month, new development towards this project has been shifted towards the ReactFinancialDashboard. I was running into limitations on the type of front end-styling I was doing in this project and decided I wanted to restart the program from scratch with different priorities and a fundamentally different front-end structure. 
+
 ---------------------------------------
 ## FYI
 This repository is a snapshot of a private repository, which contains the full program.
